@@ -1,9 +1,14 @@
 import {SearchBar} from '../SearchBar/SearchBar';
 import {SearchResults} from '../SearchResults/SearchResults';
 import './App.css';
+import React from 'react';
 
-function App() {
-  return (
+
+
+
+class App extends React.Component{
+  render(){
+    return (
 <div>
   <h1>Ja<span class="highlight">mmm</span>ing</h1>
   <div class="App">
@@ -14,7 +19,8 @@ function App() {
     </div>
   </div>
 </div>
-  );
+    );
+  }
 }
 
 export default App;
