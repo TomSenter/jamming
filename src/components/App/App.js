@@ -1,5 +1,6 @@
 import {SearchBar} from '../SearchBar/SearchBar';
 import {SearchResults} from '../SearchResults/SearchResults';
+import {Playlist} from '../Playlist/Playlist';
 import './App.css';
 import React from 'react';
 
@@ -15,7 +16,7 @@ class App extends React.Component{
     <SearchBar />
     <div class="App-playlist">
       <SearchResults/>
-      <!-- Add a Playlist component -->
+      <Playlist/>
     </div>
   </div>
 </div>
