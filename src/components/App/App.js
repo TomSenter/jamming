@@ -15,7 +15,11 @@ class App extends React.Component{
       {name:'name 2',artist:'artist 2',album:'album 2',id:'2'},
       {name:'name 2',artist:'artist 2',album:'album 2',id:'3'}
     ],
-    
+      playlistName: 'My Playlist',
+      playlistTracks: [{name:'name 1',artist:'artist 1',album:'album 1',id:'1'},
+      {name:'name 2',artist:'artist 2',album:'album 2',id:'2'},
+      {name:'name 2',artist:'artist 2',album:'album 2',id:'3'}
+    ]
     };
   }
   render(){
