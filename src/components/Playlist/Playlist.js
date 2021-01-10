@@ -13,3 +13,5 @@ export class Playlist extends React.Component{
         );
     }
 }
+
+// here the props needs the same name for some reason
