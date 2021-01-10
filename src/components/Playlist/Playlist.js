@@ -20,7 +20,7 @@ import TrackList from '../TrackList/TrackList';
         <div className="Playlist">
             <input onChange={this.handleNameChange} defaultValue={this.props.playlistName}/>
             <TrackList tracks={this.props.playlistTracks} isRemoval={true} onRemove={this.props.onRemove} />
-            <button className="Playlist-save">SAVE TO SPOTIFY</button>
+            <button onClick={this.props.onSave} className="Playlist-save">SAVE TO SPOTIFY</button>
         </div> 
         );
     }
