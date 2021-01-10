@@ -1,6 +1,6 @@
 import {SearchBar} from '../SearchBar/SearchBar';
-import {SearchResults} from '../SearchResults/SearchResults';
-import {Playlist} from '../Playlist/Playlist';
+import SearchResults from '../SearchResults/SearchResults';
+import Playlist from '../Playlist/Playlist';
 import './App.css';
 import React from 'react';
 
@@ -16,25 +16,60 @@ class App extends React.Component{
       {name:'name 3',artist:'artist 3',album:'album 3',id:'3'}
     ],
       playlistName: 'My Playlist',
-      playlistTracks: [{name:'name 1',artist:'artist 1',album:'album 1',id:'1'},
-      {name:'name 2',artist:'artist 2',album:'album 2',id:'2'},
-      {name:'name 2',artist:'artist 2',album:'album 2',id:'3'}
+      playlistTracks: [{name:'name 1',artist:'artist 1',album:'album 1',id:'4'},
+      {name:'name 2',artist:'artist 2',album:'album 2',id:'5'},
+      {name:'name 2',artist:'artist 2',album:'album 2',id:'6'}
     ]
     };
+     
 
     this.addTrack = this.addTrack.bind(this);
+    this.removeTrack = this.removeTrack.bind(this);
+    this.updatePlaylistName = this.updatePlaylistName.bind(this);
   }
 
   addTrack(track){
-    if(this.state.playlistTracks.find(savedTrack=>{
+    
+    let tracks = this.state.playlistTracks;
+     if(tracks.find(savedTrack=>{
+       
       return savedTrack.id === track.id;
     })){
       return;
     } else{
-      this.state.playlistTracks.push(track);
+      tracks.push(track);
+
+      // it takes out the array, and this.setState fills it back in
+      this.setState({
+        playlistTracks: tracks
+      });
     }
+   
   }
 
+  removeTrack(track){
+    
+    let tracks = this.state.playlistTracks;
+     if(tracks.find(savedTrack=>{
+          return savedTrack.id !== track.id;
+     })){
+       tracks.pop(track);
+       this.setState({playlistTracks: tracks});
+     } else{
+       return;
+     }
+
+  }
+
+  // playlist methods
+
+  updatePlaylistName(name){
+      this.setState({playlistName:name});
+  }
+  
+  savePlaylist(){
+    
+  }
 
 
   render(){
@@ -44,13 +79,13 @@ class App extends React.Component{
   <div className="App">
     <SearchBar />
     <div className="App-playlist">
-      <SearchResults onAdd={this.addTrack()} searchResults={this.state.searchResults}/>
-      <Playlist playlistName={this.state.playlistName} playlistTracks={this.state.playlistTracks} />
+      <SearchResults onAdd={this.addTrack} searchResults={this.state.searchResults}/>
+      <Playlist onNameChange={this.updatePlaylistName} onRemove={this.removeTrack} playlistName={this.state.playlistName} playlistTracks={this.state.playlistTracks} />
     </div>
   </div>
 </div>
     );
   }
 }
-
+//when using function like addTrack in props, no () is required because you don't want to call it straight away
 export default App;

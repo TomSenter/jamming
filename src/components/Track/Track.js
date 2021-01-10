@@ -1,16 +1,32 @@
 import React from 'react';
 import './Track.css';
 
-export class Track extends React.Component{
+ class Track extends React.Component{
 
-  
+  constructor(props){
+    super(props);
+
+
+    this.addTrack = this.addTrack.bind(this);
+    this.removeTrack = this.removeTrack.bind(this);
+  }
+
+  addTrack(){
+    
+    this.props.onAdd(this.props.track);
+  }
+
+  removeTrack(){
+    this.props.onRemove(this.props.track);
+    
+  }
 
   renderAction(){
-    const isRemoval = true;
-     if(isRemoval){
-       return <button className="Track-action">-</button>;
+    
+     if(this.props.isRemoval){
+       return <button onClick={this.removeTrack} className="Track-action">-</button>;
      } else{
-       return <button className="Track-action">+</button>
+       return <button onClick={this.addTrack} className="Track-action">+</button>
      }
   }
 
@@ -27,3 +43,6 @@ export class Track extends React.Component{
 );
     }
 }
+
+// here the renderAction function is called so needs ()
+export default Track;
