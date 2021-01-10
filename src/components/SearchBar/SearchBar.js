@@ -12,7 +12,7 @@ export class SearchBar extends React.Component{
     }
 
     handleTermChange(e){
-       value = e.target.value;
+       const value = e.target.value;
        this.setState({
            term: value
        });
