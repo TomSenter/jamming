@@ -2,7 +2,7 @@ let accessToken;
 let expiresIn;
 // assume this is OAuth 
 // use an object to store methods that access the API and do extra things
-const redirect = 'http://ppppp.surge.sh/';
+const redirect = 'http://localhost:3000/'// 'http://ppppp.surge.sh/';
 const clientID = 'b5d4b40c678b42fdb428e6fa9fe39a22';
 export const Spotify = {
     getAccessToken(){
@@ -80,7 +80,7 @@ export const Spotify = {
                },networkError=>console.log(networkError.message)
                ).then(jsonResponse=>{
                    const playlistID = jsonResponse.id;
-                   //second fetch 
+                   //third fetch 
                    return fetch(`https://api.spotify.com/v1/users/${userID}/playlists/${playlistID}/tracks`,{
                        method:'POST',
                        headers: headers,
