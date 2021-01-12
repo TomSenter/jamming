@@ -6,6 +6,8 @@ import './App.css';
 import React from 'react';
 
 
+// think it doesn't have the access token loaded sometimes so it reloads the page
+
 
 
 class App extends React.Component{
@@ -73,12 +75,14 @@ class App extends React.Component{
         })
     });
   }
+   
 
+  
 
-  // search func
+  // it would get access token each time it searched was the problem
   search(term){
     Spotify.search(term).then(searchResults=>{
-      console.log(searchResults);
+      
       this.setState({
         
         searchResults: searchResults
@@ -101,6 +105,14 @@ class App extends React.Component{
 </div>
     );
   }
+
+  componentDidMount(){
+    Spotify.getAccessToken();
+  }
+
+
+  
+  
 }
 //when using function like addTrack in props, no () is required because you don't want to call it straight away
 export default App;

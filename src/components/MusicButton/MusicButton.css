@@ -3,6 +3,7 @@
     color: white;
    border-radius: 15%;
    margin-right: 10%;
+   cursor: pointer;
 }
 
 .button:hover{
