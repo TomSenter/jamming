@@ -1,0 +1,11 @@
+button{
+    background-color: black;
+    color: white;
+   border-radius: 15%;
+   margin-left: 8%;
+}
+
+.flex{
+    display: flex;
+
+}

@@ -1,5 +1,6 @@
 import React from 'react';
 import './Track.css';
+import {MusicButton} from '../MusicButton/MusicButton';
 
 // this.props.track.preview has audio in
 
@@ -7,11 +8,6 @@ import './Track.css';
 
   constructor(props){
     super(props);
-
-    
-
-
-
 
     this.addTrack = this.addTrack.bind(this);
     this.removeTrack = this.removeTrack.bind(this);
