@@ -1,8 +1,13 @@
-button{
+.button{
     background-color: black;
     color: white;
    border-radius: 15%;
-   margin-left: 8%;
+   margin-right: 10%;
+}
+
+.button:hover{
+    background-color: white;
+    color: purple;
 }
 
 .flex{

@@ -42,8 +42,8 @@ export class MusicButton extends React.Component{
     render(){
         return (
             <div className="flex">
-                <button onClick={this.play}>Play</button>
-                <button onClick={this.pause}>Pause</button>
+                <button className="button" onClick={this.play}>Play</button>
+                <button className="button" onClick={this.pause}>Pause</button>
 
             </div>
         );
