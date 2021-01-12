@@ -29,7 +29,7 @@ h2 {
 .App {
   height: 100%;
   padding: 0 17% 10% 17%;
-  background-image: url('../App/Images/background_photo_desktop.webp');
+  background-image: linear-gradient(300deg,rgb(170, 24, 170),rgba(29, 29, 226, 0.726));
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

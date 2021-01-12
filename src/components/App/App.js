@@ -49,11 +49,34 @@ class App extends React.Component{
   removeTrack(track){
     
     let tracks = this.state.playlistTracks;
-     if(tracks.find(savedTrack=>{
+     /*if(tracks.find(savedTrack=>{
           return savedTrack.id !== track.id;
      })){
-       tracks.pop(track);
+       // this gets rid of the specific item at that index
+       let index = tracks.indexOf(track);
+       tracks.splice(index,1);
        this.setState({playlistTracks: tracks});
+     } else if(tracks.find(savedTrack=>{
+      return savedTrack.id === track.id;
+     })){
+       let index = tracks.indexOf(track);
+      tracks.splice(index,1);
+      this.setState({playlistTracks: tracks});
+         
+     } else{
+       return;
+     }*/
+       
+
+
+       // found a better solution for the deletion of tracks
+     if(tracks.find(savedTrack=>{
+      return savedTrack.id === track.id;
+     })){
+       let index = tracks.indexOf(track);
+      tracks.splice(index,1);
+      this.setState({playlistTracks: tracks});
+         
      } else{
        return;
      }

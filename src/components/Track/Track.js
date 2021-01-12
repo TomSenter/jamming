@@ -41,7 +41,7 @@ import {MusicButton} from '../MusicButton/MusicButton';
     <p>{this.props.track.artist} | {this.props.track.album}</p>
   </div>
   <MusicButton url={this.props.track.preview}/>
-  <button className="Track-action">{this.renderAction()}</button>
+  <span className="Track-action">{this.renderAction()}</span>
  </div>
 );
     }
