@@ -1,10 +1,16 @@
 import React from 'react';
 import './Track.css';
 
+// this.props.track.preview has audio in
+
  class Track extends React.Component{
 
   constructor(props){
     super(props);
+
+    
+
+
 
 
     this.addTrack = this.addTrack.bind(this);
@@ -38,6 +44,7 @@ import './Track.css';
     <h3>{this.props.track.name}</h3>
     <p>{this.props.track.artist} | {this.props.track.album}</p>
   </div>
+  <MusicButton url={this.props.track.preview}/>
   <button className="Track-action">{this.renderAction()}</button>
  </div>
 );

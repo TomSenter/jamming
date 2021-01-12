@@ -45,7 +45,7 @@ export const Spotify = {
             }
             
             return  jsonResponse.tracks.items.map(track=>
-                 ({id:track.id,name:track.name,artists:track.artists[0].name,album:track.album.name,uri:track.uri})
+                 ({id:track.id,name:track.name,artists:track.artists[0].name,album:track.album.name,uri:track.uri,preview:track.preview_url})
             );
         });
     },
