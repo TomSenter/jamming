@@ -30,25 +30,33 @@ class App extends React.Component{
   addTrack(track){
     
     let tracks = this.state.playlistTracks;
+    let search = this.state.searchResults;
+    
      if(tracks.find(savedTrack=>{
-       
+       // if already in playlist add
       return savedTrack.id === track.id;
     })){
       return;
     } else{
+      let index = search.indexOf(track);
       tracks.push(track);
+      search.splice(index,1);
 
       // it takes out the array, and this.setState fills it back in
       this.setState({
-        playlistTracks: tracks
+        playlistTracks: tracks,
+        searchResults: search
       });
     }
+
+    
    
   }
 
   removeTrack(track){
     
     let tracks = this.state.playlistTracks;
+    let search = this.state.searchResults;
      /*if(tracks.find(savedTrack=>{
           return savedTrack.id !== track.id;
      })){
@@ -75,7 +83,9 @@ class App extends React.Component{
      })){
        let index = tracks.indexOf(track);
       tracks.splice(index,1);
-      this.setState({playlistTracks: tracks});
+      search.unshift(track);
+      this.setState({playlistTracks: tracks,
+      searchResults:search});
          
      } else{
        return;
