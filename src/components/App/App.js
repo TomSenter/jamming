@@ -9,6 +9,8 @@ import React from 'react';
 // think it doesn't have the access token loaded sometimes so it reloads the page
 
 
+// spotify object is passed down 
+
 
 class App extends React.Component{
   constructor(props){

@@ -2,7 +2,7 @@ let accessToken;
 let expiresIn;
 // assume this is OAuth 
 // use an object to store methods that access the API and do extra things
-const redirect = 'http://localhost:3000/'// 'http://ppppp.surge.sh/';
+const redirect = 'https://tomsenter.github.io/jamming/'// 'http://ppppp.surge.sh/';
 const clientID = 'b5d4b40c678b42fdb428e6fa9fe39a22';
 export const Spotify = {
     getAccessToken(){
