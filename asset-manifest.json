@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/jamming/static/css/main.14eeabab.chunk.css",
+    "main.css": "/jamming/static/css/main.c4b3062c.chunk.css",
     "main.js": "/jamming/static/js/main.cab96c85.chunk.js",
     "main.js.map": "/jamming/static/js/main.cab96c85.chunk.js.map",
     "runtime-main.js": "/jamming/static/js/runtime-main.c778c67f.js",
@@ -8,13 +8,13 @@
     "static/js/2.62121cef.chunk.js": "/jamming/static/js/2.62121cef.chunk.js",
     "static/js/2.62121cef.chunk.js.map": "/jamming/static/js/2.62121cef.chunk.js.map",
     "index.html": "/jamming/index.html",
-    "static/css/main.14eeabab.chunk.css.map": "/jamming/static/css/main.14eeabab.chunk.css.map",
+    "static/css/main.c4b3062c.chunk.css.map": "/jamming/static/css/main.c4b3062c.chunk.css.map",
     "static/js/2.62121cef.chunk.js.LICENSE.txt": "/jamming/static/js/2.62121cef.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.c778c67f.js",
     "static/js/2.62121cef.chunk.js",
-    "static/css/main.14eeabab.chunk.css",
+    "static/css/main.c4b3062c.chunk.css",
     "static/js/main.cab96c85.chunk.js"
   ]
 }
